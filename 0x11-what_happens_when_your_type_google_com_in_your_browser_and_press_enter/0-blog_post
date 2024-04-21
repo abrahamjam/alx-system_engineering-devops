@@ -1,0 +1,40 @@
+Creating a comprehensive post that covers the sequence of events and technologies involved when you type a URL like "google.com" into your browser and press Enter involves a deep dive into several fundamental components of modern internet architecture. Here's a detailed breakdown of each component, from the DNS request to the final database interaction:
+
+1. DNS Request
+Function: Translates human-readable domain names like "google.com" into a machine-readable IP address.
+Process: Your browser checks if it has the IP address cached; if not, it sends a request to your configured DNS server to resolve the domain name.
+2. TCP/IP
+Function: Facilitates the core communication between your computer and the web server using the Internet Protocol (IP) and the Transmission Control Protocol (TCP).
+Process: Establishes a TCP connection with the server at the resolved IP address. This involves the TCP three-way handshake (SYN, SYN-ACK, ACK) to ensure a reliable connection.
+3. Firewall
+Function: Acts as a security guard that controls incoming and outgoing network traffic based on predetermined security rules.
+Process: Evaluates the DNS request, the TCP packets, and subsequent HTTPS requests against a set of rules to decide whether to allow or block the traffic.
+4. HTTPS/SSL
+Function: Secures the data transmitted over the network.
+Process: When a connection is made, an SSL/TLS handshake occurs. This includes negotiating encryption algorithms, and exchanging digital certificates and keys to establish a secure, encrypted connection.
+5. Load Balancer
+Function: Distributes incoming network traffic across multiple servers to ensure reliability and high availability.
+Process: Analyzes the incoming requests to the web service and efficiently directs them to the least busy or most capable server, often based on factors like concurrent connections, server health, and geographic location.
+6. Web Server
+Function: Handles incoming HTTP requests from clients (browsers) and serves back HTTP responses, typically containing HTML pages, images, and other content.
+Process: Receives the secure, load-balanced request and fetches the appropriate static resources to respond to the client.
+7. Application Server
+Function: Manages the application's logic and interacts dynamically with the web server to generate web pages.
+Process: Processes the requests that involve dynamic content. For instance, when querying data or handling user inputs, it runs the backend application logic to generate the required content dynamically.
+8. Database
+Function: Stores and retrieves data as required by other applications.
+Process: The application server makes queries to the database to fetch, update, or insert data, which might then be processed and formatted before being sent back to the web server and, ultimately, to the user’s browser.
+Workflow Overview:
+When you enter "google.com" and press Enter:
+
+DNS resolution occurs to find the IP address of the server.
+TCP/IP connection is established with the server.
+Firewall checks are performed to ensure security compliance.
+HTTPS/SSL encryption secures the data exchange.
+A load balancer ensures the request is handled efficiently.
+The web server processes the request for static content.
+The application server generates any required dynamic content.
+Any necessary data is retrieved from or stored in the database.
+Each component plays a crucial role in delivering a fast, secure, and reliable web browsing experience. Understanding how these elements work together can greatly enhance one's knowledge of web technologies and network security.
+
+https://www.linkedin.com/pulse/what-happens-when-you-type-googlecom-your-browser-press-abraham-james-n4apf/?published=t
